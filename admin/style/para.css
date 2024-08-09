@@ -1,0 +1,124 @@
+/* ----------------------- parametrage site service societe direction ------------------------------- */
+/* Style général du corps de la page */
+body {
+    font-family: 'Poppins', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style des indicateurs de progression */
+.progress-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.progress-step {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #444;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    margin: 0 10px;
+    position: relative;
+    transition: background 0.3s, color 0.3s;
+}
+
+.progress-step.completed {
+    background: #4CAF50; /* Vert pour succès */
+    color: #ffffff;
+}
+
+.progress-step.completed::after {
+    content: "✓";
+    font-size: 16px;
+}
+
+.progress-step.active {
+    background: #171717; /* Couleur de l'étape active */
+    color: #ffffff;
+}
+
+/* Style du formulaire */
+form {
+    background: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 50px auto;
+    max-width: 500px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    height: 300px; /* Hauteur fixe du formulaire */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Style des labels */
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Style des champs de texte */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background: #ffffff;
+    color: #333;
+    font-size: 16px;
+    box-sizing: border-box; 
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #4CAF50;
+    outline: none;
+}
+
+/* Style des boutons */
+button {
+    background-color: #171717;
+    color: #ffffff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    align-self: flex-end; /* Aligner le bouton à droite */
+}
+
+button:hover {
+    background-color: #2c2c2c;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Style des messages d'erreur */
+.error-message {
+    color: #ff4d4d;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+.success-alert {
+    background-color: #4CAF50; /* Vert pour le succès */
+    color: #ffffff;
+    padding: 15px;
+    border-radius: 4px;
+    text-align: center;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
